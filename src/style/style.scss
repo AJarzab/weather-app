@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  background-image: linear-gradient(
+      to right,
+      rgba(black, 0.4),
+      rgba(black, 0.4)
+    ),
+    url('../../dist/imgs/bg.jpg');
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  margin: 20px;
+  color: #fff;
+}
+
+#submit-btn {
+  background-color: transparent;
+  border: none;
+  color: $white;
+}
+
+#submit-btn i {
+  font-size: 20px;
+}
+
+#form {
+  display: flex;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 20%;
+  display: flex;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+#weather-info i {
+  font-size: 3rem;
+}
+
+.temperature {
+  font-size: 6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+#temperature-icon {
+  text-align: center;
+}
+
+.weather-container {
+  display: flex;
+  margin-top: 20%;
+  justify-content: space-between;
+}
