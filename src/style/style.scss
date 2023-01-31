@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:wght@400;700&display=swap');
 
 $primary: #11998e;
 $secondary: #38ef7d;
@@ -114,11 +114,19 @@ body {
 }
 
 #temperature-icon {
-  text-align: center;
+  position: absolute;
+  left: 40px;
+  top: 33%;
 }
 
 .weather-container {
   display: flex;
   margin-top: 20%;
   justify-content: space-between;
+}
+
+.weather-details-info {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
 }
